@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.icicibank.RIB</groupId>
   <artifactId>v1</artifactId>
-  <packaging>wari</packaging>
+  <packaging>war</packaging>
   <version>RIB</version>
   <name>v1</name>
   <url>http://maven.apache.org</url>
