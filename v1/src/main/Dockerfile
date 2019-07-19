@@ -1,8 +1,11 @@
 FROM ubuntu:latest
-RUN apt-get -y update && apt-get -y upgrade
+MAINTAINER jyothi
+RUN apt-get -y update
 RUN mkdir /usr/local/tomcat
-RUN wget https://www-eu.apache.org/dist/tomcat/tomcat-9/v9.0.22/bin/apache-tomcat-9.0.22.tar.gz
-RUN cd /tmp && tar xvfz tomcat.tar.gz
-RUN cp -Rv /tmp/apache-tomcat-8.5.16/* /usr/local/tomcat/
+RUN wget wget http://www-eu.apache.org/dist/tomcat/tomcat-9/v9.0.14/bin/apache-tomcat-9.0.14.tar.gz -P /tmp
+RUN tar xf /tmp/apache-tomcat-9*.tar.gz -C /opt/tomcat
+RUN ln -s /opt/tomcat/apache-tomcat-9.0.14 /opt/tomcat/latest
+RUN chown -RH tomcat: /opt/tomcat/latest
+RUN sh -c 'chmod +x /opt/tomcat/latest/bin/*.sh'
 EXPOSE 8085
-CMD /usr/local/tomcat/bin/catalina.sh run
+CMD systemctl start tomcat
