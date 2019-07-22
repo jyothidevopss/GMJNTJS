@@ -2,6 +2,5 @@ FROM ubuntu
 MAINTAINER jyothi
 RUN apt-get update
 RUN apt-get install -y apache2
-EXPOSE 80
-RUN systemctl start tomcat
+EXPOSE 8085
 RUN systemctl status tomcat
