@@ -10,6 +10,7 @@ class AddNumbers
       Scanner in = new Scanner(System.in);
      
       x = in.nextInt();
+      x = in.nextInt();
       y = in.nextInt();
       z = x + y;
      
