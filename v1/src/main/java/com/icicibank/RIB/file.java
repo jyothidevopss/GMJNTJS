@@ -13,7 +13,7 @@ class AddNumbers
       x = in.nextInt();
       y = in.nextInt();
       z = x + y;
-     
+      z = x + y;
       System.out.println("Sum of the integers = " + z);
   
    }
